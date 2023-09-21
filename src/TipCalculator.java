@@ -6,7 +6,10 @@ public class TipCalculator {
     public static void main(String[] args)
     {
         Scanner scan = new Scanner(System.in);
+
+        //item list management
         List<String> itemName = new ArrayList<>();
+        String item;
 
         System.out.println("Welcome to the tip calculator!");
         System.out.println();
@@ -18,17 +21,16 @@ public class TipCalculator {
         {
             System.out.print("Enter the cost of the item in dollars and cents (-1 to end): ");
             itemPrice = scan.nextDouble();
+            scan.nextLine();
             if (itemPrice == -1)
             {
                 break;
             }
 
             //capture item
-            System.out.println();
             System.out.print("Enter the item: ");
-            String item = scan.nextLine();
+            item = scan.nextLine();
             itemName.add(item);
-            System.out.print("test");
 
             bill += itemPrice;
         }
