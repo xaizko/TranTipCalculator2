@@ -1,9 +1,12 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TipCalculator {
     public static void main(String[] args)
     {
         Scanner scan = new Scanner(System.in);
+        List<String> itemName = new ArrayList<>();
 
         System.out.println("Welcome to the tip calculator!");
         System.out.println();
@@ -21,8 +24,10 @@ public class TipCalculator {
             }
 
             //capture item
+            System.out.println();
             System.out.print("Enter the item: ");
-
+            String item = scan.nextLine();
+            itemName.add(item);
 
             bill += itemPrice;
         }
@@ -61,5 +66,7 @@ public class TipCalculator {
         System.out.println("Total cost per person: $" + String.format("%.2f", costPer));
         System.out.println("----------------");
 
+        //print item name
+        System.out.print(itemName);
     }
 }
