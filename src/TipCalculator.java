@@ -28,6 +28,7 @@ public class TipCalculator {
             System.out.print("Enter the item: ");
             String item = scan.nextLine();
             itemName.add(item);
+            System.out.print("test");
 
             bill += itemPrice;
         }
