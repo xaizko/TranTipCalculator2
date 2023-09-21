@@ -70,6 +70,10 @@ public class TipCalculator {
         System.out.println("----------------");
 
         //print item name
-        System.out.print(itemName);
+        System.out.println("Items ordered: ");
+        for (String i : itemName)
+        {
+            System.out.println(i);
+        }
     }
 }
