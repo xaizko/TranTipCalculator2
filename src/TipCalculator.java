@@ -39,6 +39,25 @@ public class TipCalculator {
         System.out.print("How many people did you eat with? ");
         int people = scan.nextInt();
 
+        //tip recommendation
+        System.out.println("How was the service?");
+        System.out.println("1. Good");
+        System.out.println("2. Okay");
+        System.out.println("3. Bad");
+        System.out.print("Enter the number corresponding to your choice: ");
+        int service = scan.nextInt();
+
+        double tipPercentage = 0.0;
+
+        // Set tip percentage based on service feedback
+        if (service == 1) {
+            System.out.println("Recommended tip: 20%");
+        } else if (service == 2) {
+            System.out.println("Recommended tip: 15%");
+        } else if (service == 3) {
+            System.out.println("Recommended tip: 10%");
+        }
+
         // tip percent
         System.out.print("What percent would you like to tip? (0-100): ");
         double tip = scan.nextDouble();
